@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projetizeart</title>
+    <title>Menu Responsivo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -13,6 +13,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 
 
@@ -26,6 +28,91 @@
    
    
 }
+
+
+@-webkit-keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+            transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+            transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+            transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
+/* Classe personalizada para usar com AOS */
+[data-aos="jello-horizontal"] {
+  opacity: 0;
+  transform: scale3d(1, 1, 1);
+  transition-property: transform, opacity;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+
+  &.aos-animate {
+    opacity: 1;
+    animation: jello-horizontal 1s ease forwards;
+  }
+
+  @media screen and (min-width: 768px) {
+    &.aos-animate {
+      animation: jello-horizontal 1s ease forwards;
+    }
+  }
+}
+
+
 
 .botao-topo {
             position: fixed;
@@ -72,6 +159,28 @@ body {
 img, video{
   width: 100%;
 }
+
+[data-aos="focus-animation"] {
+  opacity: 0;
+  filter: blur(12px);
+  transition-property: filter, opacity;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+
+  &.aos-animate {
+    opacity: 1;
+    filter: blur(0);
+  }
+
+  @media screen and (min-width: 768px) {
+    &.aos-animate {
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+}
+
+
 
 @media screen and (max-width: 480px){
 .header {
@@ -4016,10 +4125,10 @@ hr{
     line-height: 1;
     text-decoration: none;
     color: #ffffff;
-    font-size: 18px;
+    font-size: 1.3rem;
     border-radius: 8px;
-    width: 200px;
-    height: 40px;
+    width: 30%;
+    padding: 1%;
     font-weight: bold;
     border-bottom: 4px solid #179e43;
     transition: 0.3s;
@@ -4090,19 +4199,23 @@ hr{
           background-color: black;
           color: white;
           padding-top: 12%;
+         
         }
         .divdotitulodasduvidas{
           font-family: Poppins;
           
+          
         }
         .divdotitulodasduvidas h2{
-          font-size: 2.3rem;
+          font-size: 3rem;
           margin-left: 1%;
           
         }
         .faq-container{
+       
           width: 90%;
           margin: auto;
+          font-size: 1.7rem;
         }
         .faq-container p{
           font-size: 1.7rem;
@@ -4290,6 +4403,9 @@ button:hover {
     margin: auto;
    }
   
+   #titulodozap{
+    font-size: 3.1rem;
+   }
 
 }
     </style>
@@ -4306,7 +4422,7 @@ button:hover {
         </nav>
         <div class="menu-button" onclick="toggleMenu()">☰</div>
     </header>
-    <div class="overlay-menu" id="overlayMenu">
+    <div class="overlay-menu" id="overlayMenu" >
         <div class="close-button" onclick="toggleMenu()">✖</div>
         <nav class="overlay-nav">
             <a href="#sectiondoInicio">Home</a>
@@ -4316,10 +4432,18 @@ button:hover {
         </nav>
     </div>
 
-    <section class="sectiondoInicio" id="sectiondoInicio">
+    <section class="sectiondoInicio" id="sectiondoInicio" >
       
    <div class="imagemdoinicioo">
-    <img src="Design sem nome_20241108_021359_0000.png" class="classepraimagens">
+    <img src="Design sem nome_20241108_021359_0000.png" class="classepraimagens"
+    data-aos="fade-in"
+    data-aos-offset="200"
+    data-aos-delay="50"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    data-aos-mirror="true"
+    data-aos-once="false"
+    data-aos-anchor-placement="top-center">
 
    </div>
       <div class="inicio">
@@ -4331,7 +4455,8 @@ button:hover {
         </div>
         <div class="divdobotaodeinicio">
          
-<button class="button button-item">
+<button class="button button-item" data-aos="fade-up-left"
+data-aos-duration="2000">
   <span class="button-bg">
     <span class="button-bg-layers">
       <span class="button-bg-layer button-bg-layer-1 -purple"></span>
@@ -4357,7 +4482,7 @@ button:hover {
    
     
    
-    <section class="sectiondoSobrenos" id="sectiondoSobrenos">
+    <section class="sectiondoSobrenos" id="sectiondoSobrenos" data-aos="fade-up">
       <div class="imagemdosobrenos">
 
         <img src="images.jpeg" id="imagem" >
@@ -4365,9 +4490,10 @@ button:hover {
   
       <div class="divdotirmtulodosobre">
        
-              <h1>Quem somos nós?</h1>
+              <h1 data-aos="fade-right">Quem somos nós?</h1>
       </div>
-      <div class="divdoparagrafodosobrenos">
+      <div class="divdoparagrafodosobrenos" data-aos="fade-right"
+      data-aos-delay="500">
        
   <p><span>A Projetize é uma empresa focada em design gráfico e na criação de produtos personalizados</span>, destacando-se pela capacidade de transformar a imaginação dos clientes em realidade.</p>
          
@@ -4407,19 +4533,19 @@ button:hover {
       <img src="canva3.png">
     </div>
     <div class="carousel-item">
-      <img src="4_20241111_195257_0000.png">
+      <img src="6.png">
     </div>
     <div class="carousel-item">
-      <img src="5_20241111_195257_0001.png">
+      <img src="7.png">
     </div>
     <div class="carousel-item">
-      <img src="6_20241111_195257_0002.png">
+      <img src="8.png">
     </div>
     <div class="carousel-item">
-      <img src="7_20241111_195257_0003.png">
+      <img src="9.png">
     </div>
     <div class="carousel-item">
-      <img src="8_20241111_195257_0004.png">
+      <img src="10.png">
     </div>
   </div>
 </div>  
@@ -4432,7 +4558,7 @@ button:hover {
     <section class="sectiondasduvidas">
 
 
-        <div class="faq-container">
+        <div class="faq-container" data-aos="focus-animation">
           <div class="divdotitulodasduvidas">
             <h2>Dúvidas Frequentes</h2>
 
@@ -4478,11 +4604,12 @@ button:hover {
        
            <div class="divdotitulocontato">
        
-              <h1>Contate-nos no <span>Whatsapp!</span></h1>
+              <h1 id="titulodozap" data-aos="fade-right">Contate-nos no <span>Whatsapp!</span></h1>
       </div>
      
      <div class="divpracentralizarobotaodozap">
-       <a href="https://wa.me/5521976822355?text=Olá%20gostaria%20de%20saber%20mais%20informações" target="_blank" class="original-button">📞 Whatsapp</a>
+       <a href="https://wa.me/5521976822355?text=Olá%20gostaria%20de%20saber%20mais%20informações" target="_blank" class="original-button"
+       data-aos="jello-horizontal">📞 Whatsapp</a>
      </div>
 
  <hr class="hrabaixodobotaodozap">
@@ -4492,8 +4619,8 @@ button:hover {
 
 
   <section class="newsletter">
-    <h2>Inscreva-se para receber nossas notícias!</h2>
-    <form id="emailForm">
+    <h2 data-aos="fade-right">Inscreva-se para receber nossas notícias!</h2>
+    <form id="emailForm" data-aos="jello-horizontal">
       <input type="email" id="emailInput" placeholder="Digite seu e-mail" required>
       <button type="submit">Inscrever-se</button>
     </form>
@@ -4516,19 +4643,32 @@ button:hover {
 
 <div class="footer-section contact-info">
         
-        <h1>Informações de Contato</h1>
-        <p>Telefone: (21) 1234-5678</p>
-        <p>Email: contato@projetize.com</p>
-        <p>Endereço: Rua Exemplo, 123 - Anchieta, RJ</p>
+        <h1 data-aos="fade-right">Informações de Contato</h1>
+        <p
+        data-aos="fade-right"
+        data-aos-delay="200">Telefone: (21) 1234-5678</p>
+        <p
+        data-aos="fade-right"
+        data-aos-delay="200">Email: contato@projetize.com</p>
+        <p
+        data-aos="fade-right"
+        data-aos-delay="200">Endereço: Rua Exemplo, 123 - Anchieta, RJ</p>
       </div>
 
       <!-- Redes Sociais -->
       <div class="footer-section social-media">
-        <h2>Redes Sociais</h2>
+        <h2 data-aos="fade-right"
+        data-aos-delay="400">Redes Sociais</h2>
         <div class="social-icons">
          
-          <a href="https://www.instagram.com/projetizeart/" target="_blank"><img src="Instagram_logo_2016.svg.png" alt="Instagram"></a>
-          <a href="https://wa.me/5521976822355" target="_blank"><img src="WhatsApp.svg.png" alt="WhatsApp"></a>
+          <a href="https://www.instagram.com/projetizeart/" target="_blank"
+          data-aos="fade-right"
+        data-aos-delay="600"
+        ><img src="Instagram_logo_2016.svg.png" alt="Instagram"></a>
+          <a href="https://wa.me/5521976822355" target="_blank"><img src="download.png" alt="WhatsApp"
+            
+            data-aos="fade-right"
+        data-aos-delay="600"></a>
         </div>
       </div>
 
@@ -4540,7 +4680,7 @@ button:hover {
     </div>
 
     <!-- Direitos Autorais e Termos -->
-    <div class="footer-bottom">
+    <div class="footer-bottom" data-aos="focus-animation">
       <p>&copy; 2024 Projetize. Todos os direitos reservados.</p>
       <p><a href="#termos">Termos de Serviço</a> | <a href="#politica">Política de Privacidade</a></p>
     </div>
@@ -4702,7 +4842,12 @@ function alterarImagem() {
 
         // Adiciona um ouvinte de evento para quando a tela for redimensionada
         window.addEventListener('resize', alterarImagem);
+
+       
+  AOS.init();
+
     </script>
 </body>
 </html>
+
 
