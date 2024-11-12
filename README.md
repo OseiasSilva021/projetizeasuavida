@@ -18,13 +18,13 @@ O site da Projetizeart está em fase de desenvolvimento e já conta com algumas 
   
 - **Chatbot Personalizado** (futuramente): Planejamos implementar um chatbot para atender nossos clientes automaticamente, ajudando a responder perguntas frequentes e fornecer informações rápidas sobre produtos e serviços.
 
-- **Inscrição para Novidades**: Um campo de cadastro permite que os usuários insiram seu email para receber atualizações e promoções. Ao se inscrever, o usuário receberá emails personalizados sobre novos produtos, catálogos e ofertas exclusivas.
+- **Inscrição para Novidades** (futuramente): Um campo de cadastro permite que os usuários insiram seu email para receber atualizações e promoções. Ao se inscrever, o usuário receberá emails personalizados sobre novos produtos, catálogos e ofertas exclusivas.
 
-- **Galeria de Produtos Personalizados**: Uma área dedicada para exibir exemplos de produtos personalizados, ajudando o cliente a visualizar o resultado final e inspirar-se para seus próprios pedidos.
+- **Galeria de Produtos Personalizados** (futuramente): Uma área dedicada para exibir exemplos de produtos personalizados, ajudando o cliente a visualizar o resultado final e inspirar-se para seus próprios pedidos.
 
-- **Calculadora de Orçamentos**: Uma ferramenta futura para que os usuários possam estimar os preços de seus produtos personalizados com base nas preferências selecionadas.
+- **Calculadora de Orçamentos**  (futuramente): Uma ferramenta futura para que os usuários possam estimar os preços de seus produtos personalizados com base nas preferências selecionadas.
 
-- **Avaliações de Clientes**: Seção de depoimentos e avaliações de clientes para que os novos usuários possam conhecer a experiência de outros consumidores com nossos serviços.
+- **Avaliações de Clientes**  (futuramente): Seção de depoimentos e avaliações de clientes para que os novos usuários possam conhecer a experiência de outros consumidores com nossos serviços.
 
 ## Tecnologias Utilizadas
 
